@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sqlweb.kittericpc3.actionbartTransparentScroll.NotifyingScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_header"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avoid over-scroll  In Gingerbread (API 9), Android introduced a brand new way to notify the user a scrollable container is being scrolled beyond the content bounds. First it introduced the notion of EdgeEffect (available in the API starting API 14) and enabled over-scroll. While this is not a problem in general, it can be pretty annoying when one of the edge of your scrollable content is different from the background color.  You can reproduce it be simply flinging the ScrollView rapidly to the top and you’ll notice some white color (the background color) appears on top of the screen because the image is scrolling beyond the bounds. I personally consider this a a UI glitch and usually prefer disabling it in this rare cases.  One could imagine the best way to avoid over-scroll is to use View#setOverScrollMode(int) to change the mode to View#OVER_SCROLL_NEVER. Although it works, it also remove the edge effect which can be visually disturbing1. A simple way to do that is to modify the NotifyingScrollView to force the maximum over scroll values to zero when necessary  Enforcing ActionBar contrast  Having an transparent ActionBar may lead to design issues because you generally don’t know about the background you’ll be displayed on top of. For instance you may end up with a transparent ActionBar displaying a white text on top of a white description image. No need to say it makes the ActionBar invisible and useless.  The easiest way to avoid such a problem consists on modifying the image to make it a little bit darker at the top. Thus, in a worse case scenario (i.e. white image) we would have a grey area on top of the image making the ActionBar content (title, icons, buttons, etc.) visible.  A simple way to do that is to overlay a translucent dark to transparent gradient on top of the image. This can be done in XML only with the Drawable described below:"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+
+    </LinearLayout>
+
+</com.sqlweb.kittericpc3.actionbartTransparentScroll.NotifyingScrollView>
